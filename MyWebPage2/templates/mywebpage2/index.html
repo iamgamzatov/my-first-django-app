@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* Твой рабочий фон */
+            background-image: url("{% static 'mywebpage2/fon.jpg' %}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Стильная карточка-плашка для текста */
+        .welcome-container {
+            background: rgba(255, 255, 255, 0.8); /* Белый фон с прозрачностью 80% */
+            padding: 40px 50px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(8px); /* Эффект матового стекла */
+            transition: transform 0.3s ease;
+        }
+
+        /* Небольшой эффект при наведении на карточку */
+        .welcome-container:hover {
+            transform: translateY(-5px);
+        }
+
+        h1 {
+            color: #1e293b;
+            font-size: 2.8rem;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        p {
+            color: #475569;
+            font-size: 1.25rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        /* Аккуратная кнопка для стиля, если захочешь куда-то перейти */
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            transition: background 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: #1d4ed8;
+            box-shadow: 0 6px 16px rgba(29, 78, 216, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="welcome-container">
+        <h1>Привет от Расула Гамзатова!</h1>
+        <p>Статика подключена, шаблоны работают, сервер крутится. Первая важная победа в настройке проекта позади!</p>
+        <a href="#" class="btn">Погнали дальше</a>
+    </div>
+
+</body>
+</html>

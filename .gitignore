@@ -1,0 +1,15 @@
+# Виртуальное окружение
+venv/
+.venv/
+env/
+
+# Кэш Python
+__pycache__/
+*.pyc
+
+# Локальная база данных SQLite
+*.sqlite3
+
+# Среда разработки (если используешь PyCharm)
+.idea/
+.vscode/
